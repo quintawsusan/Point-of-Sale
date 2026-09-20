@@ -32,26 +32,6 @@ def client():
     
     app.dependency_overrides.clear()
     Base.metadata.drop_all(bind=engine)
-    
-# @pytest.fixture
-# def test_user(client):
-#     user_data = {
-#         "username": "testuser",
-#         "password": "testpassword",
-#         "email": "hRb4B@example.com",
-#     }
-    
-#     client.post("/auth/register", json=user_data)
-#     return user_data
-
-# @pytest.fixture
-# def auth_headers(client, test_user):
-#     response = client.post(
-#         "/auth/login",
-#         data={"username": test_user["username"], "password": test_user["password"]},
-#     )
-#     token = response.json()["access_token"]
-#     return {"Authorization": f"Bearer {token}"}
 
 @pytest.fixture
 def test_user(client):

@@ -100,3 +100,74 @@ Click **Authorize** in Swagger and enter the credentials to test protected endpo
 * **409** - resource cannot be deleted because it is referenced elsewhere
 * **401** - authentication credentials are missing or invalid
 * **422** - request data fails validation
+
+
+## Running Tests
+
+The project uses **Pytest** for automated testing. The test suite uses a separate **SQLite database**, so running the tests does not affect the normal PostgreSQL development database.
+
+### Install Dependencies
+
+Create and activate your virtual environment, then install the project dependencies:
+
+```bash
+pip install -r requirements.txt
+```
+
+### Run the Complete Test Suite
+
+From the root directory of the project, run:
+
+```bash
+pytest
+```
+
+To see more detailed test output, run:
+
+```bash
+pytest -v
+```
+
+### Test Coverage
+
+The automated tests cover the main POS functionality, including:
+
+* User authentication and authorization
+* Users
+* Products
+* Categories
+* Customers
+* Suppliers
+* Sales
+* Sale items
+* Payments
+* Receipts
+* Successful CRUD operations
+* Request validation errors
+* Missing resources and `404` responses
+* Authentication and authorization failures
+* Other key API failure scenarios
+
+### Test Database
+
+Tests use **SQLite** instead of the PostgreSQL development database. The test database is created and managed by the test fixtures, keeping the test environment isolated from the application's normal database.
+You do not need to start PostgreSQL or modify your development database before running the tests.
+
+### Running Specific Tests
+
+You can run an individual test file:
+
+```bash
+pytest tests/test_product.py
+```
+
+Or run a specific test:
+
+```bash
+pytest tests/test_product.py -v
+```
+
+or run all the tests
+```bash
+pytest app/tests -v
+```
