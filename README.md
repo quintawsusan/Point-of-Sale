@@ -28,11 +28,11 @@ Foreign keys are enforced at the database level and validated at the API level, 
 
 ## Tech Stack
 
-* **FastAPI** — API framework and routing
-* **SQLAlchemy** — ORM and database layer
-* **Pydantic** — request/response validation
-* **PostgreSQL** — database
-* **JWT + pwdlib** — authentication and password hashing
+* **FastAPI** - API framework and routing
+* **SQLAlchemy** - ORM and database layer
+* **Pydantic** - request/response validation
+* **PostgreSQL** - database
+* **JWT + pwdlib** - authentication and password hashing
 
 ## Project Structure
 
@@ -88,15 +88,15 @@ Open:
 
 Authentication is available through:
 
-* `POST /auth/register` — create an account
-* `POST /auth/login` — obtain a JWT access token
-* `GET /auth/me` — view the authenticated user
+* `POST /auth/register` - create an account
+* `POST /auth/login` - obtain a JWT access token
+* `GET /auth/me` - view the authenticated user
 
 Click **Authorize** in Swagger and enter the credentials to test protected endpoints.
 
 ## Error Handling
 
-* **404** — resource or referenced foreign key does not exist
-* **409** — resource cannot be deleted because it is referenced elsewhere
-* **401** — authentication credentials are missing or invalid
-* **422** — request data fails validation
+* **404** - resource or referenced foreign key does not exist
+* **409** - resource cannot be deleted because it is referenced elsewhere
+* **401** - authentication credentials are missing or invalid
+* **422** - request data fails validation
