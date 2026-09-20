@@ -4,12 +4,12 @@ A REST API for a small-to-medium retail business built with **FastAPI, SQLAlchem
 
 ## Features
 
-* **Inventory Management** — categories, suppliers, products, stock, and pricing
-* **Sales Processing** — sales, sale items, and multiple payment methods
-* **Customer Management** — customer records linked to purchase history
-* **User Access Control** — staff accounts with Admin and Cashier roles
-* **Receipts** — unique receipt generated for each sale
-* **Authentication** — JWT-based authentication protecting API resources
+* **Inventory Management** - categories, suppliers, products, stock, and pricing
+* **Sales Processing** - sales, sale items, and multiple payment methods
+* **Customer Management** - customer records linked to purchase history
+* **User Access Control** - staff accounts with Admin and Cashier roles
+* **Receipts** - unique receipt generated for each sale
+* **Authentication** - JWT-based authentication protecting API resources
 
 ## Entities & Relationships
 
